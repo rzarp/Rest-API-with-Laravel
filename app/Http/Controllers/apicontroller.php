@@ -10,6 +10,11 @@ class apicontroller extends Controller
     public function get_all_barang() {
         return response()->json(BarangModel::all(),200);
     }
+     public function get_barang_Byid($id) {
+        $check_barang = BarangModel::firstWhere('kode_barang', $id);
+
+        return response()->json($check_barang,200);
+    }
     public function insert_data_barang(Request $request){
         $insert_barang = new BarangModel;
         $insert_barang->nama_barang = $request->namaBarang;

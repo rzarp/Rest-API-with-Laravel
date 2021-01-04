@@ -28,3 +28,4 @@ get_all_barang */
 Route::post('barang/tambah_barang','apicontroller@insert_data_barang');
 Route::put('/barang/update/{kode_barang}','apicontroller@update_data_barang');
 Route::delete('barang/delete/{kode_barang}','apicontroller@delete_data_barang');
+Route::get('barang/{kode_barang}','apicontroller@get_barang_Byid');
